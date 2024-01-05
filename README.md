@@ -1,4 +1,4 @@
-# Redis Cluster and Spring-Boot local development
+# Redis Cluster and Spring Boot local development
 
 Experimenting with Redis Cluster and Read Replicas as well as integration test setup and execution using redis cluster and read replicas.
 
