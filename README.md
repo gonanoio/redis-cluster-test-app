@@ -18,7 +18,7 @@ When running locally the intent was to create a redis cluster with a specified n
 Setting the spring profile to "docker" also executes `docker-compose` against the included docker-compose.yaml file.
 
 * `mvn spring-boot:run` or `mvn spring-boot:run -Dspring-boot.run.profiles=docker` to launch redis cluster and redis commander via docker-compose automatically
-* Redis Commander can be accessed at: http://localhsot:8081/ 
+* Redis Commander can be accessed at: http://localhost:8081/ 
 * Swagger Doc can be used to read and write data and can be accessed at: http://localhost:8080/swagger-ui/index.html
 
 ## Inducing Primary Node Failure
