@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.gonanoio.redis.controller.HashControllerIT
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.13 s -- in com.gonanoio.redis.controller.HashControllerIT
