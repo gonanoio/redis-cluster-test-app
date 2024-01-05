@@ -23,8 +23,14 @@ Setting the spring profile to "docker" also executes `docker-compose` against th
 
 ## Inducing Primary Node Failure
 To force master fail over to a replica execute the following command:
-`docker exec -it redis-cluster bash -c "mv /redis-conf/7000/redis.conf /redis-conf/7000/redis.conf.tmp && redis-cli -h 127.0.0.1 -p 7000 shutdown NOSAVE"`
+```shell
+docker exec -it redis-cluster bash -c "mv /redis-conf/7000/redis.conf /redis-conf/7000/redis.conf.tmp && redis-cli -h 127.0.0.1 -p 7000 shutdown NOSAVE"
+```
 
-This renames the redis configuration file for primary node running on port 7000 and then executes `shutdown NOSAVE` against the same server. It's necessary to rename the config file so that supervisor is not able to restart the node before fail over occurs.
+This does the following:
+* Renames the redis configuration file for primary node running on port 7000
+* Executes `shutdown NOSAVE` against the same server. 
+
+It's necessary to rename the config file so that supervisor is not able to restart the node before fail over occurs.
 
 
